@@ -1,0 +1,83 @@
+# ===== 构建产物 =====
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+build/
+[Ll]og/
+[Ll]ogs/
+
+# ===== Visual Studio / Rider / VS Code =====
+.vs/
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.rsuser
+*.userprefs
+*.DotSettings.user
+*.VC.db
+*.VC.VC.opendb
+.vsconfig
+
+# ===== NuGet =====
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+.nuget/
+
+# ===== 测试与覆盖率 =====
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.VisualState.xml
+TestResult.xml
+coverage*.json
+coverage*.xml
+coverage*.info
+*.coverage
+*.coveragexml
+
+# ===== 发布 / 数据库 / 其他 =====
+publish/
+*.publishsettings
+*.pubxml
+*.pubxml.user
+*.mdf
+*.ldf
+*.ndf
+*.dbmdl
+*.dbproj.schemaview
+*.jfm
+*.pfx
+*.p12
+*.trace.db
+PublishScripts/
+
+# ===== 操作系统 =====
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# ===== 编辑器临时文件 =====
+*~
+*.tmp
+*.bak
+*.swp
+*.swo
+*.orig
+*.rej
