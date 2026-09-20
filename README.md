@@ -20,12 +20,15 @@ dotnet --version
 
 ```
 csharp-study/
-├─ test_1/                     # 练习项目 1：Hello World 起步
-│  ├─ test_1.slnx              # 解决方案文件
-│  └─ test_1/
-│     ├─ Program.cs            # 入口代码
-│     └─ test_1.csproj         # 项目文件（net10.0）
-├─ .gitignore                  # 忽略 bin/ obj/ .vs/ 等构建产物
+├─ test_1/                        # 练习工程目录
+│  ├─ test_1.slnx                 # 解决方案文件（含下列项目）
+│  ├─ test_1/                     # 项目 1：Hello World 起步
+│  │  ├─ Program.cs               # 入口代码
+│  │  └─ test_1.csproj            # 项目文件（net10.0）
+│  └─ study_20260920/             # 项目 2：2026-09-20 学习
+│     ├─ Program.cs               # 常量 / 转义 / 类型转换
+│     └─ study_20260920.csproj    # 项目文件（net10.0）
+├─ .gitignore                     # 忽略 bin/ obj/ .vs/ 等构建产物
 └─ README.md
 ```
 
@@ -41,6 +44,21 @@ dotnet run --project test_1
 ```
 Hello, World!
 ```
+
+想跑今天的学习项目：
+
+```powershell
+cd test_1
+dotnet run --project study_20260920
+```
+
+## 学习记录
+
+| 日期 | 项目 | 内容 |
+| --- | --- | --- |
+| 2026-09-20 | `study_20260920` | 常量 `const`、转义字符（`\n` `\t` `\"` `\\` `\b` `\a`）、`@` 取消转义、隐式转换规则、显式转换（括号强转 / `Parse` / `Convert` / `ToString`），做完成绩录入练习 |
+
+> 注：`Program.cs` 里已经学过的小节用 `#region` 分段、以注释保留，方便日后回看当时的理解。
 
 ## 怎么新增一个练习项目
 
