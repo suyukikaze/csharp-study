@@ -25,9 +25,12 @@ csharp-study/
 │  ├─ test_1/                     # 项目 1：Hello World 起步
 │  │  ├─ Program.cs               # 入口代码
 │  │  └─ test_1.csproj            # 项目文件（net10.0）
-│  └─ study_20260920/             # 项目 2：2026-09-20 学习
-│     ├─ Program.cs               # 常量 / 转义 / 类型转换
-│     └─ study_20260920.csproj    # 项目文件（net10.0）
+│  ├─ study_20260920/             # 项目 2：2026-09-20 学习
+│  │  ├─ Program.cs               # 常量 / 转义 / 类型转换
+│  │  └─ study_20260920.csproj    # 项目文件（net10.0）
+│  └─ study_20260921/             # 项目 3：2026-09-21 学习
+│     ├─ Program.cs               # 异常捕获 / 运算符
+│     └─ study_20260921.csproj    # 项目文件（net10.0）
 ├─ .gitignore                     # 忽略 bin/ obj/ .vs/ 等构建产物
 └─ README.md
 ```
@@ -49,14 +52,17 @@ Hello, World!
 
 ```powershell
 cd test_1
-dotnet run --project study_20260920
+dotnet run --project study_20260921
 ```
+
+> 提示：`study_20260921` 开头的异常捕获练习和最后的比较大小练习都要手动输入，直接回车或输入非数字会走进 `catch`，属正常现象。
 
 ## 学习记录
 
 | 日期 | 项目 | 内容 |
 | --- | --- | --- |
 | 2026-09-20 | `study_20260920` | 常量 `const`、转义字符（`\n` `\t` `\"` `\\` `\b` `\a`）、`@` 取消转义、隐式转换规则、显式转换（括号强转 / `Parse` / `Convert` / `ToString`），做完成绩录入练习 |
+| 2026-09-21 | `study_20260921` | 异常捕获 `try` / `catch` / `finally`、算术运算符与优先级、自增减 `++` `--`、字符串拼接（`+` / `string.Format`）、条件运算符、逻辑运算符（`!` `&&` `\|\|` 及短路规则）、位运算符、三目运算符，做完比较大小练习 |
 
 > 注：`Program.cs` 里已经学过的小节用 `#region` 分段、以注释保留，方便日后回看当时的理解。
 
