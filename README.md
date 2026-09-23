@@ -20,7 +20,7 @@ dotnet --version
 
 ```
 csharp-study/
-├─ test_1/                        # 练习工程目录
+├─ c#入门/                        # 练习工程目录
 │  ├─ test_1.slnx                 # 解决方案文件（含下列项目）
 │  ├─ test_1/                     # 项目 1：Hello World 起步
 │  │  ├─ Program.cs               # 入口代码
@@ -41,7 +41,7 @@ csharp-study/
 ## 怎么运行
 
 ```powershell
-cd test_1
+cd "c#入门"
 dotnet run --project test_1
 ```
 
@@ -54,13 +54,15 @@ Hello, World!
 想跑当天最新的学习项目：
 
 ```powershell
-cd test_1
+cd "c#入门"
 dotnet run --project study_20260923
 ```
 
 > 提示：`study_20260923` 需要输入两次——先输「今天看视频的时间」（分钟），再输一个数字给 `switch` 判断星期（1-7，其他值走 `default`）。
 >
 > `study_20260921` 的异常捕获练习和比较大小练习同样需要手动输入，直接回车或输入非数字会走进 `catch`，属正常现象。
+>
+> 目录名带 `#`，在终端里记得用引号包起来（`cd "c#入门"`），否则 `#` 后面的内容可能被当成注释。
 
 ## 学习记录
 
@@ -86,7 +88,7 @@ dotnet new console -o practice_02_types
 dotnet run --project practice_02_types
 ```
 
-想把新项目加进解决方案，编辑 `test_1/test_1.slnx` 即可：
+想把新项目加进解决方案，编辑 `c#入门/test_1.slnx` 即可：
 
 ```xml
 <Solution>

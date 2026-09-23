@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace study_20260921
+namespace study_20260923
 {
     public class  Program
     {
