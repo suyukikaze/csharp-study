@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="study_20260920/study_20260920.csproj" />
   <Project Path="study_20260921/study_20260921.csproj" />
+  <Project Path="study_20260923/study_20260923.csproj" Id="fcdaef8d-cb28-4727-a3bd-556f6ad4dcf2" />
   <Project Path="test_1/test_1.csproj" />
 </Solution>
