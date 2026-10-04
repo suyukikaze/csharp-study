@@ -193,21 +193,25 @@ namespace 小游戏实践
                                     {
                                         int BossAtk = r.Next(BossAtkMin, BossAtkMax + 1);
                                         playerHp -= BossAtk;
+                                        // 先显示本次伤害，让玩家看到自己的血量变化
+                                        Console.ForegroundColor = ConsoleColor.Yellow;
+                                        Console.SetCursorPosition(2, h - 3);
+                                        Console.Write("                                        ");
+                                        Console.SetCursorPosition(2, h - 3);
+                                        Console.Write("Boss对你造成了{0}点伤害，你剩余血量：{1}", BossAtk, playerHp);
                                         if (playerHp <= 0)
                                         {
-                                            // 被击败：直接进入失败结算，不再等玩家按 J
+                                            // 被击败：提示后停顿，等玩家按键再进入失败结算
+                                            Console.ForegroundColor = ConsoleColor.White;
+                                            Console.SetCursorPosition(2, h - 5);
+                                            Console.Write("                                        ");
+                                            Console.SetCursorPosition(2, h - 5);
+                                            Console.Write("很遗憾，你被Boss击败了！按任意键继续");
+                                            Console.ReadKey(true);
                                             End = "营救失败";
                                             nowSceneID = 3;
                                             isOver = true;
                                             break;
-                                        }
-                                        else
-                                        {
-                                            Console.ForegroundColor = ConsoleColor.Yellow;
-                                            Console.SetCursorPosition(2, h - 3);
-                                            Console.Write("                                        ");
-                                            Console.SetCursorPosition(2, h - 3);
-                                            Console.Write("Boss对你造成了{0}点伤害，你剩余血量：{1}", BossAtk, playerHp);
                                         }
                                     }
                                     else
