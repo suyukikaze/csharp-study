@@ -1,5 +1,4 @@
-﻿using System;
-using System.Drawing;
+using System;
 namespace 小游戏实践 
 { 
     class Program
@@ -196,15 +195,11 @@ namespace 小游戏实践
                                         playerHp -= BossAtk;
                                         if (playerHp <= 0)
                                         {
-                                            Console.ForegroundColor = ConsoleColor.White;
-                                            Console.SetCursorPosition(2, h - 3);
-                                            Console.Write("                                        ");
-                                            Console.SetCursorPosition(2, h - 4);
-                                            Console.Write("                                        ");
-                                            Console.SetCursorPosition(2, h - 5);
-                                            Console.Write("                                        ");
-                                            Console.SetCursorPosition(2, h - 5);
-                                            Console.Write("很遗憾，你被Boss击败了！");
+                                            // 被击败：直接进入失败结算，不再等玩家按 J
+                                            End = "营救失败";
+                                            nowSceneID = 3;
+                                            isOver = true;
+                                            break;
                                         }
                                         else
                                         {
@@ -368,7 +363,7 @@ namespace 小游戏实践
                                     nowSelEndIndex--;
                                     if (nowSelEndIndex < 0)
                                     {
-                                        nowSelIndex = 1;
+                                        nowSelEndIndex = 1;
                                     }
                                     break;
                                 case 'S':
