@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 namespace study_20261007
 {
     class Program
@@ -35,9 +35,10 @@ namespace study_20261007
                                          new int[4] { 6, 7, 8, 9 } };
             //获取行数
             int rowCount2 = arr.GetLength(0);
-            //获取列数
-            int colCount2 = arr[0].Length;
-            Console.WriteLine("行数：{0}，列数：{1}", rowCount2, colCount2);
+            //交错数组没有"列数"的概念，因为每行长度可以不同
+            //这里取的是第0行的长度，仅仅作为一个示例
+            int firstRowLength = arr[0].Length;
+            Console.WriteLine("行数：{0}，第0行的长度：{1}", rowCount2, firstRowLength);
             //遍历交错数组
             for (int i = 0; i < arr.GetLength(0); i++)
             {
@@ -48,6 +49,18 @@ namespace study_20261007
                 Console.WriteLine();
             }
             //增加，删除，查找和一维数组类似
+
+            //印证：交错数组每行的长度可以不同
+            int maxRowLength = 0;
+            for (int i = 0; i < arr.GetLength(0); i++)
+            {
+                Console.WriteLine("第{0}行的长度为：{1}", i, arr[i].Length);
+                if (arr[i].Length > maxRowLength)
+                {
+                    maxRowLength = arr[i].Length;
+                }
+            }
+            Console.WriteLine("最长的行长：{0}", maxRowLength);
             #endregion
 
         }
