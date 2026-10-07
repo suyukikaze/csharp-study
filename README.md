@@ -50,9 +50,12 @@ csharp-study/
 │  ├─ c#基础/                       # 练习脚手架（Hello World）
 │  │  ├─ Program.cs
 │  │  └─ c#基础.csproj
-│  └─ study_20261005/             # 项目 7：2026-10-05 学习
-│     ├─ Program.cs               # 枚举 / 数组
-│     └─ study_20261005.csproj
+│  ├─ study_20261005/             # 项目 7：2026-10-05 学习
+│  │  ├─ Program.cs               # 枚举 / 一维数组
+│  │  └─ study_20261005.csproj
+│  └─ study_20261007/             # 项目 8：2026-10-07 学习
+│     ├─ Program.cs               # 二维数组 / 交错数组
+│     └─ study_20261007.csproj
 ├─ .gitignore                     # 忽略 bin/ obj/ .vs/ 等构建产物
 └─ README.md
 ```
@@ -74,10 +77,10 @@ Hello, World!
 
 ```powershell
 cd "c#基础"
-dotnet run --project study_20261005
+dotnet run --project study_20261007
 ```
 
-> 这个项目直接运行即可，**不需要任何输入**，会打印枚举判断结果和数组操作的输出。
+> 这个项目直接运行即可，**不需要任何输入**，会打印二维数组和交错数组的遍历结果。
 
 想玩那个 RPG 小游戏：
 
@@ -112,6 +115,7 @@ dotnet run --project 小游戏实践
 | 2026-09-24 | `控制台相关知识` | 控制台 API：`Console.Clear`、`SetWindowSize` / `SetBufferSize`（先窗口后缓冲区）、`SetCursorPosition`、`ForegroundColor` / `BackgroundColor`、`CursorVisible`、`Environment.Exit`；`Random` 随机数（`Next()` / `Next(max)` / `Next(min, max)`）；用 `Console.ReadKey(true)` + `while` + `switch` 做了 WASD 移动小游戏 |
 | 2026-10-04 | `小游戏实践` | 综合实践：用多场景状态机（`nowSceneID` + `while` + `switch`）搭出控制台 RPG「和风沐雪大冒险」——开始菜单、地图绘制与碰撞、Boss 回合制战斗（`Random` 算伤害、血量判定）、营救公主、结算界面。综合运用了前面学的分支、循环、`Random`、控制台 API 与方法封装 |
 | 2026-10-05 | `study_20261005` | **枚举** `enum`：声明位置（namespace 内，不能写在方法里）、`if` / `else` 比较、`switch` 匹配、`(int)` 转序号、`ToString()`、`Enum.Parse` 字符串转枚举；**数组**：五种声明方式（`int[] arr1` / `new int[5]` / `new int[5]{...}` / `new int[]{...}` / `{...}`）、通过重建数组实现「增加/删除元素」、遍历查找元素 |
+| 2026-10-07 | `study_20261007` | **二维数组** `int[,]`：`new int[3,4]` 与 `new int[3,3]{{...}}` 初始化、`GetLength(0)` 取行 / `GetLength(1)` 取列、双层 `for` 遍历；**交错数组** `int[][]`：数组的数组、每行长度可不同、`arr[i].Length` 遍历 |
 
 > 注：`Program.cs` 里已经学过的小节用 `#region` 分段、以注释保留，方便日后回看当时的理解。
 
