@@ -56,9 +56,12 @@ csharp-study/
 │  ├─ study_20261007/             # 项目 8：2026-10-07 学习
 │  │  ├─ Program.cs               # 二维数组 / 交错数组
 │  │  └─ study_20261007.csproj
-│  └─ study_20261010/             # 项目 9：2026-10-10 学习
-│     ├─ Program.cs               # 值类型 / 引用类型
-│     └─ study_20261010.csproj
+│  ├─ study_20261010/             # 项目 9：2026-10-10 学习
+│  │  ├─ Program.cs               # 值类型 / 引用类型
+│  │  └─ study_20261010.csproj
+│  └─ study_20261012/             # 项目 10：2026-10-12 学习
+│     ├─ Program.cs               # 函数（方法）
+│     └─ study_20261012.csproj
 ├─ .gitignore                     # 忽略 bin/ obj/ .vs/ 等构建产物
 └─ README.md
 ```
@@ -80,10 +83,10 @@ Hello, World!
 
 ```powershell
 cd "c#基础"
-dotnet run --project study_20261010
+dotnet run --project study_20261012
 ```
 
-> 这个项目直接运行即可，**不需要任何输入**，会打印值类型与引用类型在赋值前后的对比结果。
+> 这个项目需要输入**一个半径**（如 `5`），会调用 `circul(r)` 算出面积和周长。直接回车或不输数字会抛异常。
 
 想玩那个 RPG 小游戏：
 
@@ -120,6 +123,7 @@ dotnet run --project 小游戏实践
 | 2026-10-05 | `study_20261005` | **枚举** `enum`：声明位置（namespace 内，不能写在方法里）、`if` / `else` 比较、`switch` 匹配、`(int)` 转序号、`ToString()`、`Enum.Parse` 字符串转枚举；**数组**：五种声明方式（`int[] arr1` / `new int[5]` / `new int[5]{...}` / `new int[]{...}` / `{...}`）、通过重建数组实现「增加/删除元素」、遍历查找元素 |
 | 2026-10-07 | `study_20261007` | **二维数组** `int[,]`：`new int[3,4]` 与 `new int[3,3]{{...}}` 初始化、`GetLength(0)` 取行 / `GetLength(1)` 取列、双层 `for` 遍历；**交错数组** `int[][]`：数组的数组、每行长度可不同、`arr[i].Length` 遍历 |
 | 2026-10-10 | `study_20261010` | **值类型与引用类型**：引用类型（类、数组、`string`）vs 值类型（`int` / `float` / `bool` / `char` / `enum` / `struct`）；赋值的区别——值类型拷贝值（它变我不变），引用类型拷贝地址（它变我也变）；栈与堆；`string` 作为不可变的特殊引用类型 |
+| 2026-10-12 | `study_20261012` | **函数（方法）**：写在哪（`class` / `struct` 中）、基本语法（修饰符 + 返回值类型 + 函数名 + 参数列表）、`void` 无返回值（`Sayhello()`）、有返回值（`cmp(a,b)` 求最大值）、用数组一次返回多个值（`circul(r)` 返回面积与周长） |
 
 > 注：`Program.cs` 里已经学过的小节用 `#region` 分段、以注释保留，方便日后回看当时的理解。
 

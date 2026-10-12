@@ -41,6 +41,9 @@ namespace study_20261010
             string str2 = str;
             str2 = "321";
             Console.WriteLine("str={0},str2={1}", str, str2);
+            //string是一个特殊的引用类型，他不遵循他变我也变
+            //虽然方便，但是会频繁的改变string，重新赋值
+            //会频繁的创建新的string对象，造成内存的浪费
             #endregion
 
         }
