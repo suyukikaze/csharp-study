@@ -13,15 +13,15 @@ namespace CSharpBasic
             int h = 30;
             ConsoleInit(w, h);
 
-            SceneType SceneType = SceneType.Begin;
+            SceneType NowSceneType = SceneType.Begin;
             while (true)
             {
-                switch (SceneType)
+                switch (NowSceneType)
                 {
                     case SceneType.Begin:
                         //开始场景
                         Console.Clear();
-                        BeginScene(w,h, ref SceneType);
+                        BeginScene(w,h, ref NowSceneType);
                         break;
                     case SceneType.Game:
                         //游戏场景
