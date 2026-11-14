@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 namespace CSharpBasic
 {
 
@@ -256,7 +256,7 @@ namespace CSharpBasic
             if (p.isStop)
             {
                 Console.SetCursorPosition(2, h - 5);
-                Console.Write("处于暂停状态，(0)需要暂停一回合", p.type==PlayerType.Player?"你":"电脑");
+                Console.Write("处于暂停状态，{0}需要暂停一回合", p.type==PlayerType.Player?"你":"电脑");
                 Console.SetCursorPosition(2, h - 4);
                 Console.Write("请按任意键让{0}开始扔色子", p.type == PlayerType.Player ? "你" : "电脑");
                 p.isStop = false;
@@ -269,7 +269,7 @@ namespace CSharpBasic
 
             //打印仍的点数
             Console.SetCursorPosition(2, h - 5);
-            Console.Write("{0}扔出的的点数为{1},", p.type == PlayerType.Player ? "你" : "电脑", num);
+            Console.Write("{0}扔出的点数为{1},", p.type == PlayerType.Player ? "你" : "电脑", num);
 
             if (p.nowIndex >= map.grids.Length - 1)
             {
